@@ -1,0 +1,4 @@
+service rttutil-hal-1-0 /vendor/bin/hw/vendor.asus.wifi.rttutil@1.0-service
+    class hal
+    user system
+    group system

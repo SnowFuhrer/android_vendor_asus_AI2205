@@ -1,0 +1,8 @@
+on property:sys.boot_completed=1
+    start ASUSEvtlog
+
+service ASUSEvtlog /vendor/bin/ASUSEvtlog
+    user root
+    group root logd system 
+    writepid /dev/cpuset/system-background/tasks
+    seclabel u:r:savelogmtp:s0

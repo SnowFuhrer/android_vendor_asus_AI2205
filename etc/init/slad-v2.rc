@@ -1,0 +1,32 @@
+on post-fs-data
+    # Create config file for WIFI_SLM
+    mkdir /data/vendor/sla 0775 system system
+    copy /vendor/etc/sla/slad.conf /data/vendor/sla/slad.conf
+    copy /vendor/etc/sla/slad_data_iface.conf /data/vendor/sla/slad_data_iface.conf
+    copy /vendor/etc/sla/slad_wlan0_iface.conf /data/vendor/sla/slad_wlan0_iface.conf
+    copy /vendor/etc/sla/slad_wlan1_iface.conf /data/vendor/sla/slad_wlan1_iface.conf
+    copy /vendor/etc/sla/slmAppUseCase.conf /data/vendor/sla/slmAppUseCase.conf
+    copy /vendor/etc/sla/slad_num_iface.conf /data/vendor/sla/slad_num_iface.conf
+    copy /vendor/etc/sla/slm_supported_list.xml /data/vendor/sla/slm_supported_list.xml
+    chmod 0664 /data/vendor/sla/slad.conf
+    chmod 0664 /data/vendor/sla/slad_data_iface.conf
+    chmod 0664 /data/vendor/sla/slad_wlan0_iface.conf
+    chmod 0664 /data/vendor/sla/slad_wlan1_iface.conf
+    chmod 0664 /data/vendor/sla/slad_num_iface.conf
+    chmod 0664 /data/vendor/sla/slm_supported_list.xml
+    chown system system /data/vendor/sla/slad_data_iface.conf
+    chown system system /data/vendor/sla/slad_wlan0_iface.conf
+    chown system system /data/vendor/sla/slad_wlan1_iface.conf
+    chown system system /data/vendor/sla/slad_num_iface.conf
+    chmod 0664 /data/vendor/sla/slmAppUseCase.conf
+
+service slad /vendor/bin/slad-v2
+    class main
+    socket slad stream 0666 root system
+    disabled
+
+on property:vendor.sla.enabled=1
+    start slad
+
+on property:vendor.sla.enabled=0
+    stop slad

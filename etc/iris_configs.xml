@@ -1,0 +1,69 @@
+<?xml version="1.0" ?>
+<!--Copyright 2019-2021 (c) Pixelworks Inc. All Rightes Reserved.
+PQ development version:1.1
+Pixelworks Inc. Company Confidential Strictly Private-->
+<IrisData>
+
+<Information Version="210" />
+
+<GoldenFwPath>/vendor/etc</GoldenFwPath>
+<CalibratedFwPath>/mnt/vendor/persist/display</CalibratedFwPath>
+
+<SoftHdrMethod>3</SoftHdrMethod>
+
+<!--Pixelworks Soft Iris color mode list-->
+<SoftIrisColorModeList DefaultMode="1000">
+</SoftIrisColorModeList>
+
+<!--MCF of primary display-->
+<McfList Display="0">
+	<McfCheck Index="0">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/mcfCheck.txt</McfCheck>
+	<McfCheck Index="1">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/mcfCheck_low.txt</McfCheck>
+	<Mcf Index="0" Type="7" Check="0">/mnt/vendor/persist/display</Mcf>
+	<Mcf Index="1" Type="7" Check="1">/mnt/vendor/persist/display</Mcf>
+</McfList>
+
+<!--Soft Iris panel calibration-->
+<InParmList Chip="5" Display="0" Version="100">
+
+	<InParm Index="1" SubIndex="0" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm2.txt</InParm>
+	<InParm Index="1" SubIndex="1" ColorTemp="7500" Pcs="2" Mcf="1" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm2.txt</InParm>
+	<InParm Index="4" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm5.txt</InParm>
+	<InParm Index="4" SubIndex="1" ColorTemp="6500" Pcs="2" Mcf="1" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm5.txt</InParm>
+	<!--For APL HDR-->
+	<InParm Index="6" SubIndex="0" ColorTemp="500" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_480nit_MaxCLL_Panel.txt</InParm>
+	<InParm Index="6" SubIndex="1" ColorTemp="500" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_680nit_MaxCLL_Panel.txt</InParm>
+	<InParm Index="6" SubIndex="2" ColorTemp="500" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_1200nit_MaxCLL_Panel.txt</InParm>
+	<InParm Index="7" SubIndex="0" ColorTemp="2200" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_480nit_MaxCLL_2200.txt</InParm>
+	<InParm Index="7" SubIndex="1" ColorTemp="2200" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_680nit_MaxCLL_2200.txt</InParm>
+	<InParm Index="7" SubIndex="2" ColorTemp="2200" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_1200nit_MaxCLL_2200.txt</InParm>
+	<InParm Index="8" SubIndex="0" ColorTemp="4000" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_480nit_MaxCLL_4000.txt</InParm>
+	<InParm Index="8" SubIndex="1" ColorTemp="4000" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_680nit_MaxCLL_4000.txt</InParm>
+	<InParm Index="8" SubIndex="2" ColorTemp="4000" UseMaxcll="1" Pcs="2" Mcf="0" Interpolation="12">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm_1200nit_MaxCLL_4000.txt</InParm>
+	<!--For APL HLG-->
+	<InParm Index="10" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm11.txt</InParm>
+	<InParm Index="10" SubIndex="1" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm10_680nit.txt</InParm>
+
+
+	<InParm Index="13" SubIndex="0" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm14.txt</InParm>
+	<InParm Index="13" SubIndex="1" ColorTemp="7500" Pcs="2" Mcf="1" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm14.txt</InParm>
+	<InParm Index="16" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm17.txt</InParm>
+	<InParm Index="16" SubIndex="1" ColorTemp="6500" Pcs="2" Mcf="1" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm17.txt</InParm>
+	<!--Color Enrich Inparm-->
+	<InParm Index="19" SubIndex="0" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm20.txt</InParm>
+	<InParm Index="22" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm23.txt</InParm>
+	<InParm Index="25" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm26.txt</InParm>
+	<InParm Index="28" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm29.txt</InParm>
+	<InParm Index="31" SubIndex="0" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm32.txt</InParm>
+	<InParm Index="34" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm35.txt</InParm>
+	<InParm Index="37" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm38.txt</InParm>
+	<!--SDR2HDR-->
+	<InParm Index="40" SubIndex="0" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm40-SDR2HDR-P3-filter-org.txt</InParm>
+	<InParm Index="40" SubIndex="1" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm41-SDR2HDR-P3-filter-100to140_linearMapping.txt</InParm>
+	<InParm Index="40" SubIndex="2" ColorTemp="7500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm42-SDR2HDR-P3-filter-100to140_toneMapping.txt</InParm>
+	<InParm Index="43" SubIndex="0" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm43-SDR2HDR-P3-filter-org.txt</InParm>
+	<InParm Index="43" SubIndex="1" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm44-SDR2HDR-P3-filter-100to140_linearMapping.txt</InParm>
+	<InParm Index="43" SubIndex="2" ColorTemp="6500" Pcs="2" Mcf="0" Interpolation="10">/vendor/etc/inparm/irissoft/inparm_ai2205_mp/inParm45-SDR2HDR-P3-filter-100to140_toneMapping.txt</InParm>
+</InParmList>
+
+</IrisData>

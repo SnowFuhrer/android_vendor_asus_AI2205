@@ -1,0 +1,7 @@
+service vendor.qti.secdisplay-hal-1-0 /vendor/bin/hw/vendor.qti.hardware.secdisplay@1.0-service
+    interface vendor.qti.hardware.secdisplay@1.0::ISecdisplay default
+    class hal
+    user system
+    group root
+    # shutting off lights while powering-off
+    shutdown critical

@@ -1,0 +1,25 @@
+#
+# rc file for ifaa service
+#
+
+service vendor.paymentKeyCheck /vendor/bin/sh /vendor/bin/paymentKeyCheck.sh
+    class late_start
+    user root
+    group root system drmrpc
+    disabled
+    seclabel u:r:savelogmtp:s0
+    oneshot
+    
+on post-fs-data
+    symlink /vendor/bin/ifaa_product /data/data/IFAA
+
+on boot
+
+on property:vendor.ifaa.verify.key=1
+    write /vendor/factory/IFAA 1
+
+on property:vendor.ifaa.verify.key=0
+    write /vendor/factory/IFAA 0
+
+on property:sys.boot_completed=1
+        start vendor.paymentKeyCheck

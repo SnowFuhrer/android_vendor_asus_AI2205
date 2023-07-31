@@ -1,0 +1,58 @@
+on post-fs-data
+    start asus_sp
+
+service asus_sp /vendor/bin/sp
+    user root
+    group root
+    disabled
+    oneshot
+
+on property:persist.vendor.asus.setupwizard_country=*
+    start asus_sp
+
+on property:vendor.debug.update.deviceinfo=1
+    start asus_sp
+
+on property:ro.boot.ftm=1 && property:sys.boot_completed=1
+    symlink /vendor/bin/UpdateDeviceName /data/data/UpdateDeviceName
+    chmod 0777 /data/data/UpdateDeviceName
+    chown system shell /data/data/UpdateDeviceName
+
+# +++ ASUS_BSP : add for QC debug set model
+on property:persist.asus.qckey=1
+    setprop vendor.asus.qckey 1
+    start asus_sp	
+
+on property:persist.asus.qckey=0
+    setprop vendor.asus.qckey 0
+    start asus_sp	
+# --- ASUS_BSP : add for QC debug set model
+
+on property:vendor.asus.update.mediaflag=1
+	write /proc/asusevtlog "INIT:Write MefiaFlag=1"
+	write /mnt/vendor/persist/MediaFlag 1
+	write /proc/asusevtlog "INIT:start ASUS_SP"
+	start asus_sp
+
+on property:vendor.asus.update.mediaflag=0
+	write /proc/asusevtlog "INIT:Write MefiaFlag=0"
+	write /mnt/vendor/persist/MediaFlag 0
+	write /proc/asusevtlog "INIT:start ASUS_SP"
+	start asus_sp
+
+# +++ ASUS_BSP : add for asuslib
+on property:vendor.asus.mediaflag=1
+    write /sys/class/asuslib/set_ASUS_media 1
+
+on property:vendor.asus.mediaflag=0
+    write /sys/class/asuslib/set_ASUS_media 0
+# --- ASUS_BSP : add for asuslib
+
+#add for support Media Performance Class
+on early-init
+    setprop ro.odm.build.media_performance_class 33
+
+#fota group
+on property:persist.vendor.fota.group=*
+	setprop vendor.asus.fota.group ${persist.vendor.fota.group}
+	start asus_sp

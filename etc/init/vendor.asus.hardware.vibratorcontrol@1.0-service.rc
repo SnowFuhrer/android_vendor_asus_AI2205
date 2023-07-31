@@ -1,0 +1,5 @@
+service vendor.vibratorcontrol-hal-1-0 /vendor/bin/hw/vendor.asus.hardware.vibratorcontrol@1.0-service
+    interface vendor.asus.hardware.vibratorcontrol@1.0::IVibratorcontrol default
+    class hal
+    user system
+    group system

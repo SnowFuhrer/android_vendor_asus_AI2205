@@ -1,0 +1,7 @@
+service vendor.pixelworks.hardware.feature /vendor/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
+    interface vendor.pixelworks.hardware.feature@1.0::IIrisFeature default
+    class hal
+    user system
+    group graphics drmrpc
+    oneshot
+    disabled

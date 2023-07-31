@@ -1,0 +1,68 @@
+#################################################################
+#                                                               #
+#                     ASUS SENSOR USER RC                       #
+#                                                               #
+#################################################################
+
+
+on init
+
+
+
+on fs
+
+
+
+on post-fs
+
+
+
+on boot
+    chmod 0766 /sys/devices/virtual/sensors/lsensor/cal
+    chmod 0766 /sys/devices/virtual/sensors/psensor/load_inf_cal
+    chmod 0766 /sys/devices/virtual/sensors/psensor/load_far_cal
+    chmod 0766 /sys/devices/virtual/sensors/psensor/load_near_cal
+    chmod 0766 /sys/devices/virtual/sensors/psensor/load_pocket_cal
+
+    #ASUS_BSP +++ Eason "Proximity/Light sensor"
+    chown system shell /sys/class/sensors/psensor/switch
+    chown system shell /sys/class/sensors/psensor/inf_cal
+    chown system shell /sys/class/sensors/psensor/hi_cal
+    chown system shell /sys/class/sensors/psensor/low_cal
+    chown system shell /sys/class/sensors/psensor/proxm
+    chown system shell /sys/class/sensors/psensor/load_cal
+    chown system shell /sys/class/sensors/psensor/selection
+    chown system shell /sys/class/sensors/psensor/load_pocket_cal
+    chown system shell /sys/class/sensors/psensor/load_near_cal
+    chown system shell /sys/class/sensors/psensor/load_far_cal
+    chown system shell /sys/class/sensors/psensor/load_inf_cal
+
+    chown system shell /sys/class/sensors/lsensor/switch
+    chown system shell /sys/class/sensors/lsensor/selection
+    chown system shell /sys/class/sensors/lsensor/cal
+    chown system shell /sys/class/sensors/lsensor/adc
+    #ASUS_BSP --- Eason "Proximity/Light sensor"
+
+on post-fs-data
+
+    #ASUS_BSP +++ Eason "Proximity/Light sensor"
+    write /sys/class/sensors/psensor/load_cal 1
+    #ASUS_BSP --- Eason "Proximity/Light sensor"
+
+
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+#             ALL sensor service (start)
+#
+#         ****DO NOT insert any on property***
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+
+
+
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+#         ALL sensor on property  (start)
+#
+#           ****DO NOT insert service***
+###+++++++++++++++++++++++++++++++++++++++++++++++###
+
+
+

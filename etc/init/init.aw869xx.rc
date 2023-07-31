@@ -1,0 +1,81 @@
+on post-fs-data
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp
+    chown system shell /sys/class/leds/aw_vibrator/rtp
+
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_play
+    chown system shell /sys/class/leds/aw_vibrator/rtp_play
+
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_play_repeat
+    chown system shell /sys/class/leds/aw_vibrator/rtp_play_repeat
+
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_play_break
+    chown system shell /sys/class/leds/aw_vibrator/rtp_play_break
+
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_play_delay
+    chown system shell /sys/class/leds/aw_vibrator/rtp_play_delay
+
+    chmod 0664 /sys/class/leds/aw_vibrator/mem_play
+    chown system shell /sys/class/leds/aw_vibrator/mem_play
+
+    chmod 0664 /sys/class/leds/aw_vibrator/gain
+    chown system shell /sys/class/leds/aw_vibrator/gain
+
+    chmod 0664 /sys/class/leds/aw_vibrator/gain_trig
+    chown system shell /sys/class/leds/aw_vibrator/gain_trig
+
+#    chmod 0664 /sys/class/leds/vibrator/trigger_level
+#    chown system shell /sys/class/leds/vibrator/trigger_level
+
+    chmod 0664 /sys/class/leds/aw_vibrator/state
+    chown system shell /sys/class/leds/aw_vibrator/state
+
+    chmod 0664 /sys/class/leds/aw_vibrator/duration
+    chown system shell /sys/class/leds/aw_vibrator/duration
+
+    chmod 0664 /sys/class/leds/aw_vibrator/activate
+    chown system shell /sys/class/leds/aw_vibrator/activate
+
+    chmod 0664 /sys/class/leds/aw_vibrator/index
+    chown system shell /sys/class/leds/aw_vibrator/index
+
+    chmod 0664 /sys/class/leds/aw_vibrator/asus_haptic_trig_control
+    chown system shell /sys/class/leds/aw_vibrator/asus_haptic_trig_control
+
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_len
+    chown system shell /sys/class/leds/aw_vibrator/rtp_len
+    chmod 0664 /sys/class/leds/aw_vibrator/rtp_data
+    chown system shell /sys/class/leds/aw_vibrator/rtp_data
+
+    chmod 0666 /sys/class/leds/aw_vibrator/f0_save
+    chown system shell /sys/class/leds/aw_vibrator/f0_save
+    chmod 0666 /sys/class/leds/aw_vibrator/osc_save
+    chown system shell /sys/class/leds/aw_vibrator/osc_save
+
+    chmod 0644 /mnt/vendor/persist/aw_cali.bin
+    chown system shell /mnt/vendor/persist/aw_cali.bin
+    chmod 0644 /mnt/vendor/persist/aw_rtp_cali.bin
+    chown system shell /mnt/vendor/persist/aw_rtp_cali.bin
+    start vib_load_cali
+
+    mkdir /data/vendor/BBY 0777 system system
+    mkdir /data/vendor/awinic 0777 system system
+
+service boot_vib /vendor/bin/sh /vendor/bin/boot_vib.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+service vib_load_cali /vendor/bin/sh /vendor/bin/vib_load_cali.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+on property:sys.boot.vibration=1
+    start boot_vib
+
+on property:vendor.asus.autofota=1
+    setprop persist.vendor.disable.vib 1

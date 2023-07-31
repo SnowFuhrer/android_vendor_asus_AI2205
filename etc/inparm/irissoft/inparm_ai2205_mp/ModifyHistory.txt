@@ -1,0 +1,34 @@
+V1.0
+Inparm 1~18 for multi-brightness calibration release
+
+V1.1
+Add inparm 19~39 for color enrich support
+
+V1.2
+update enrich color 19/20/21 setting as ROG6 setting
+
+V1.3
+inparm 19/20/21   line 1 0.688->0.68
+rename APL HDR inparm to 480/680/1200 nits
+APL HDR target on full screen 680nits, 5%APL 1000nits
+680 nits  inparm line 130->1.46
+480 nits  inparm line 130->1
+1200 nits inparm line 130->2.11
+line 34/35/36-> 0/0/1
+line 301 ->2 HDR Scurve in 3D
+S-curve 132~196 change to ASUS ROG6 versionAPL SDRHDR support, 516 1 40 for D7500 SDR2HDR, 516 1 43 for D6500 SDR2HDR
+APL SDR2HDR target for ginal backlight*1.4
+iris_configs.xml V1.0 update to support APL HDR/SDR2HDR
+irissoft_ASUS_ams678_er2_cmd_mode_dsc_fhd_plus_panel.xml V1.0 update to support APL HDR/SD2HDR Blending
+Inparm38 update to fix HDR10+ color enrich no effect issue
+PCS upate to V103 version
+
+V1.4
+Update APL SDR2HDR inparm enable the S-curve, color enrich.
+	inParm41-SDR2HDR-P3-filter-100to140_linearMapping.txt
+	inParm42-SDR2HDR-P3-filter-100to140_toneMapping.txt
+	inParm44-SDR2HDR-P3-filter-100to140_linearMapping.txt
+	inParm45-SDR2HDR-P3-filter-100to140_toneMapping.txt
+update iris_configs.xml V1.1 for HLG only reference mcf "0"
+update HDR HLG inpam10~12 to support APL HLG
+update irissoft_ASUS_ams678_er2_cmd_mode_dsc_fhd_plus_panel.xml V1.1 to support APL HLG

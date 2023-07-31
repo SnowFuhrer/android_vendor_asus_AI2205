@@ -1,0 +1,11 @@
+on post-fs-data
+service netutild_V1.1 /vendor/bin/netutild_V1.1
+    class main
+    socket netutild_V1.1 stream 0666 root system
+    disabled
+
+on property:vendor.asus.netutild.enabled=1
+    start netutild_V1.1
+
+on property:vendor.asus.netutild.enabled=0
+    stop netutild_V1.1

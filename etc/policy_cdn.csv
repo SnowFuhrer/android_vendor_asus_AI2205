@@ -1,0 +1,61 @@
+com.tencent.tmgp.pubgmhd 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.ig 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.pubg.krmobile 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.vng.pubgmobile 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.rekoo.pubgm 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.igce 90 63 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.garena.game.kgtw -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.ngjp -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.garena.game.kgid -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.ngame.allstar.eu -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.sgame 120 93 4 5 5 5 5 0x40C3C000 248 0x42C20000 1 0x40804000 2054 0x40804200 2227
+com.tencent.tmgp.sgamece 120 93 4 5 5 5 5 0x40C3C000 248 0x42C20000 1 0x40804000 2054 0x40804200 2227
+com.riotgames.league.wildrifttw -1 -1 4 4 5 5 5 0x40C3C000 248 0x42C20000 1
+com.riotgames.league.wildrift -1 -1 4 4 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.lolm -1 -1 4 4 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.speedmobile 165 147 4 5 5 6 6 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.cod -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.activision.callofduty.shooter -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.garena.game.codm -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.cf 144 123 4 4 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.YiRen -1 -1 3 3 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.af -1 -1 3 3 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.WePop -1 -1 3 3 4 4 4 0x40C3C000 248 0x42C20000 1
+com.miHoYo.Yuanshen 60 47 5 5 5 5 5 0x40C3C000 248 0x42C20000 1 0x40804000 2054 0x40804200 2227
+com.miHoYo.ys.bilibili 60 47 5 5 5 5 5 0x40C3C000 248 0x42C20000 1 0x40804000 2054 0x40804200 2227
+com.miHoYo.GenshinImpact 60 47 5 5 5 5 5 0x40C3C000 248 0x42C20000 1 0x40804000 2054 0x40804200 2227
+com.netease.mrzh -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.netease.mrzhtw -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.netease.mrzhna -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.miHoYo.bh3tw -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.miHoYo.enterprise.NGHSoDBeta -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.bh3 -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.miHoYo.bh3global -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.sgqyz -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.KiHan -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.jkchess -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.ea.gp.apexlegendsmobilefps -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tw.fivexgames.apexlegendsmobile -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.levelinfinite.apexlegendsmobile -1 -1 3 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.protopop.brightridge -1 -1 6 6 6 6 6 0x40C3C000 248 0x42C20000 1
+com.protopop.vandgels -1 -1 6 6 6 6 6 0x40C3C000 248 0x42C20000 1
+hk.com.joybomb.bbm3 -1 -1 3 3 4 4 4 0x40C3C000 248 0x42C20000 1
+com.pwrd.hotta.laohu -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.hottagames.hotta.huawei -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.hotta -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.levelinfinite.hotta.gp -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+tw.com.iwplay.ht -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.blizzard.diablo.immortal -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.netease.g67 -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.g67 -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.netease.dwrg.mi -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.dwrg -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.netease.dwrg -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.netease.idv_tw.googleplay -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.tencent.tmgp.wuxia -1 -1 5 5 5 5 5 0x40C3C000 248 0x42C20000 1
+com.kitkagames.fallbuddies -1 -1 2 2 3 4 4 0x40C3C000 127
+com.vgamecrty.projv -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.denachina.g23002013.android -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.tencent.mf.uam -1 -1 4 4 4 4 4 0x40C3C000 248 0x42C20000 1
+com.hg.wreckfest -1 -1 6 6 6 6 6 0x40C3C000 248 0x42C20000 1
+com.ludashi.benchmark2 -1 -1 7 7 7 7 7 0x41000000 4

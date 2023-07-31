@@ -1,0 +1,6 @@
+service vendor.dumpstate-qti /vendor/bin/hw/android.hardware.dumpstate-service.qti
+    class hal
+    user system
+    group system
+    interface aidl android.hardware.dumpstate.IDumpstateDevice/default
+    oneshot

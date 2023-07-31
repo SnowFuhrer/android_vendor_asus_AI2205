@@ -1,0 +1,13 @@
+# ASUS BSP Display +++
+on property:sys.debug.hdcp=0
+    setprop vendor.debug.hdcp 0
+
+on property:sys.debug.hdcp=1
+    setprop vendor.debug.hdcp 1
+
+on property:vendor.debug.hdcp=1
+    write /proc/driver/hdcp_disable 0
+
+on property:vendor.debug.hdcp=0
+    write /proc/driver/hdcp_disable 1
+# ASUS BSP Display ---

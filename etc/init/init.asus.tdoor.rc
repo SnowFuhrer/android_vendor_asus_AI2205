@@ -1,0 +1,72 @@
+service TDoorLoadK /vendor/bin/sh /vendor/bin/tdoor_load_cal.sh
+    seclabel u:r:motor:s0
+    user system
+    group root system
+    oneshot
+    disabled
+
+service TDoorOpenK /vendor/bin/sh /vendor/bin/SelfTestOpen.sh
+    seclabel u:r:motor:s0
+    user system
+    group system
+    oneshot
+    disabled
+
+service TDoorOpenHalfK /vendor/bin/sh /vendor/bin/SelfTestOpenHalf.sh
+    seclabel u:r:motor:s0
+    user system
+    group system
+    oneshot
+    disabled
+
+service TDoorCloseK /vendor/bin/sh /vendor/bin/SelfTestClose.sh
+    seclabel u:r:motor:s0
+    user system
+    group system
+    oneshot
+    disabled
+
+service TDoorLoadTempK /vendor/bin/sh /vendor/bin/tdoor_load_userK.sh 2
+    seclabel u:r:motor:s0
+    user system
+    group root system
+    oneshot
+    disabled
+
+service TDoorSaveUserK /vendor/bin/sh /vendor/bin/tdoor_load_userK.sh 3
+    seclabel u:r:motor:s0
+    user system
+    group root system
+    oneshot
+    disabled
+
+service TDoorCancelUserK /vendor/bin/sh /vendor/bin/tdoor_load_userK.sh 4
+    seclabel u:r:motor:s0
+    user system
+    group root system
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start TDoorLoadK
+
+on property:vendor.asus.thermaldoor.load_cal_data=1
+    start TDoorLoadK
+
+on property:vendor.asus.thermaldoor.load_cal_data=2
+    start TDoorLoadTempK
+
+on property:vendor.asus.thermaldoor.load_cal_data=3
+    start TDoorSaveUserK
+
+on property:vendor.asus.thermaldoor.load_cal_data=4
+    start TDoorCancelUserK
+
+on property:vendor.asus.thermaldoor.open_k=1
+    start TDoorOpenK
+
+on property:vendor.asus.thermaldoor.openhalf_k=1
+    start TDoorOpenHalfK
+
+on property:vendor.asus.thermaldoor.close_k=1
+    start TDoorCloseK

@@ -1,0 +1,27 @@
+service asus_ufs_init /vendor/bin/sh /vendor/bin/asus_ufs_init.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+service asus_ufs_shutdown /vendor/bin/sh /vendor/bin/asus_ufs_shutdown.sh
+    class core
+    user root
+    group root
+    oneshot
+    disabled
+
+service asus_ufs_check /vendor/bin/sh /vendor/bin/asus_ufs_check.sh
+    class core
+    user root
+    group root
+    disabled
+
+
+on property:sys.boot_completed=1
+    start asus_ufs_init
+    start asus_ufs_check
+
+on property:sys.shutdown.requested=*
+    start asus_ufs_shutdown

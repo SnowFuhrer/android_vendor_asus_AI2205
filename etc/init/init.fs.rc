@@ -1,0 +1,4 @@
+on post-fs
+   insmod /vendor/lib/pb_modules/tfs_linux.ko
+   insmod /vendor/lib/pb_modules/texfat.ko
+   insmod /vendor/lib/pb_modules/tntfs.ko
